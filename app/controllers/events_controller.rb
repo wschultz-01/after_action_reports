@@ -7,6 +7,10 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
   
+  def new
+    @event = Event.new
+  end
+  
   def create
     @event = Event.new(title: 'title', description: 'description', date: '4/7/2021')
 
