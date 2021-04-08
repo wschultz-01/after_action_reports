@@ -12,7 +12,7 @@ class EventsController < ApplicationController
   end
   
   def create
-    @event = Event.new(title: 'title', description: 'description', date: '4/7/2021')
+    @event = Event.new(event_params)
 
     if @event.save
       redirect_to @event
@@ -20,6 +20,11 @@ class EventsController < ApplicationController
       render :new
     end
   end
+  
+    private
+    def event_params
+      params.require(:event).permit(:title, :description, :date)
+    end
   
   
 end
