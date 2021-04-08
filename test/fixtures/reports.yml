@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  expections: MyString
+  actual_events: MyString
+  lessions: MyString
+  next_time: MyString
+  event: one
+
+two:
+  expections: MyString
+  actual_events: MyString
+  lessions: MyString
+  next_time: MyString
+  event: two
