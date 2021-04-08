@@ -3,8 +3,7 @@
 <ul>
   <% @events.each do |event| %>
     <li>
-      <a href="/events/<%= event.id %>">
-        <%= event.title %>
+      <%= link_to event.title, event %>
     </li>
   <% end %>
 </ul>
