@@ -4,4 +4,8 @@
 
 <p><%= @event.description %></p>
 
-<%= link_to "Edit Event", edit_event_path(@event) %>
+<p><%= link_to "Edit Event", edit_event_path(@event) %></p>
+
+<p><%= link_to "Delete Event", event_path(@event),
+                  method: :delete,
+                  data: { confirm: "Delete Post? This cannot be undone" } %></p>
