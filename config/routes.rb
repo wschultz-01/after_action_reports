@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
   root "events#index"
   
-  resources :events
+  resources :events do
+    resources :reports
+  end
   
 end
