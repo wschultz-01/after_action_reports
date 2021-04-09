@@ -19,14 +19,16 @@ class ReportsController < ApplicationController
   end
   
   def edit
+    @event = Event.find(params[:event_id])
     @report = Event.find(params[:event_id]).reports.find(params[:id])
   end
 
   def update
+    @event = Event.find(params[:event_id])
     @report = Event.find(params[:event_id]).reports.find(params[:id])
 
     if @report.update(report_params)
-      redirect_to @report
+      redirect_to event_report_path(@report)
     else
       render :edit
     end
