@@ -1,0 +1,15 @@
+<%= form_with model: [ @event, @event.reports.build ] do |form| %>
+    <%= form.label :expectations %>
+    <%= form.text_field :expectations %>
+
+    <%= form.label :actual_events %>
+    <%= form.text_area :actual_events %>
+
+    <%= form.label :lessons %>
+    <%= form.text_area :lessons %>
+
+    <%= form.label :next_time %>
+    <%= form.text_area :next_time %>
+
+    <%= form.submit %>
+<% end %>
