@@ -35,6 +35,10 @@ class ReportsController < ApplicationController
   end
   
   def destroy
+    @report = Event.find(params[:event_id]).reports.find(params[:id])
+    @report.destroy
+
+    redirect_to event_path(Event.find(params[:event_id]))
   end
   
   private
