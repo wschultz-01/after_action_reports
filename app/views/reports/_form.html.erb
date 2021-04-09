@@ -1,15 +1,15 @@
 <%= form_with model: [ @event, @event.reports.build ] do |form| %>
     <%= form.label :expectations %>
-    <%= form.text_field :expectations %>
+    <%= form.text_field :expectations %><br/>
 
     <%= form.label :actual_events %>
-    <%= form.text_area :actual_events %>
+    <%= form.text_area :actual_events %><br/>
 
     <%= form.label :lessons %>
-    <%= form.text_area :lessons %>
+    <%= form.text_area :lessons %><br/>
 
     <%= form.label :next_time %>
-    <%= form.text_area :next_time %>
+    <%= form.text_area :next_time %><br/>
 
     <%= form.submit %>
 <% end %>
