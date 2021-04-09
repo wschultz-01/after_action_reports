@@ -4,12 +4,12 @@ class ReportsController < ApplicationController
   end
   
   def show
+    @report = Event.find(params[:event_id]).reports.find(params[:id])
   end
   
   def new
     @event = Event.find(params[:event_id])
     @report = Report.new
-    
   end
   
   def create
@@ -26,5 +26,11 @@ class ReportsController < ApplicationController
   
   def destroy
   end
+  
+  private
+    
+    def report_params
+      params.require(:report).permit(:expectations, :actual_events, :lessons, :next_time)
+    end
   
 end
