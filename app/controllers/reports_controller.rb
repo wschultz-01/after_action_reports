@@ -15,7 +15,7 @@ class ReportsController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
     @report = @event.reports.create(report_params)
-    redirect_to report_path(@report)
+    redirect_to event_path(@event)
   end
   
   def edit
