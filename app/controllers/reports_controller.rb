@@ -4,6 +4,7 @@ class ReportsController < ApplicationController
   end
   
   def show
+    @event = Event.find(params[:event_id])
     @report = Event.find(params[:event_id]).reports.find(params[:id])
   end
   
