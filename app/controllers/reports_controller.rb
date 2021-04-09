@@ -10,6 +10,9 @@ class ReportsController < ApplicationController
   end
   
   def create
+    @article = Article.find(params[:article_id])
+    @report = @article.reports.create(report_params)
+    redirect_to report_path(@report)
   end
   
   def edit
