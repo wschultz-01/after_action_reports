@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   
   def show
     @event = Event.find(params[:id])
+    @reports = @event.reports.all
   end
   
   def new

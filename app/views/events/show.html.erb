@@ -4,6 +4,16 @@
 
 <p><%= @event.description %></p>
 
+<ul>
+  <% @reports.each do |report| %>
+    <li>
+      <%= link_to report.id, report %>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Add New Report", new_event_report_path(@event) %></p>
+
 <p><%= link_to "Edit Event", edit_event_path(@event) %></p>
 
 <p><%= link_to "Delete Event", event_path(@event),
