@@ -10,7 +10,7 @@
 <h2>Next Time</h2>
 <%= @report.next_time %><br/>
 
-<p><%= link_to "Edit Report",  edit_event_report_path(@event, @report) %></p>
+<p><%= link_to "Edit Report",  edit_report_path(@event, @report) %></p>
 
 <p><%= link_to "Delete Report", event_report_path(@report),
                   method: :delete,

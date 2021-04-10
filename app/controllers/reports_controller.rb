@@ -20,12 +20,12 @@ class ReportsController < ApplicationController
   end
   
   def edit
-    @event = Event.find(params[:event_id])
+  #  @event = Event.find(params[:event_id])
     @report = Event.find(params[:event_id]).reports.find(params[:id])
   end
 
   def update
-    @event = Event.find(params[:event_id])
+    #@event = Event.find(params[:event_id])
     @report = Event.find(params[:event_id]).reports.find(params[:id])
 
     if @report.update(report_params)

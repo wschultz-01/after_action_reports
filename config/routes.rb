@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root "events#index"
   
   resources :events do
-    resources :reports
+    resources :reports, shallow: true
   end
   
 end
