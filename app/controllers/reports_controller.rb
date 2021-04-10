@@ -4,8 +4,8 @@ class ReportsController < ApplicationController
   end
   
   def show
-    @event = Event.find(params[:event_id])
-    @report = Event.find(params[:event_id]).reports.find(params[:id])
+   # @event = Event.find(params[:event_id])
+    @report = Report.find(params[:id])
   end
   
   def new
@@ -36,10 +36,12 @@ class ReportsController < ApplicationController
   end
   
   def destroy
-    @report = Event.find(params[:event_id]).reports.find(params[:id])
+    #@report = Event.find(params[:event_id]).reports.find(params[:id])
+    @report = Report.find(params[:id])
+    @event = @report.event
     @report.destroy
 
-    redirect_to event_path(Event.find(params[:event_id]))
+    redirect_to event_path(@event)
   end
   
   private
