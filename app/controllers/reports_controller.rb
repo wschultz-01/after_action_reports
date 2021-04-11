@@ -4,7 +4,6 @@ class ReportsController < ApplicationController
   end
   
   def show
-   # @event = Event.find(params[:event_id])
     @report = Report.find(params[:id])
   end
   
@@ -20,14 +19,10 @@ class ReportsController < ApplicationController
   end
   
   def edit
-  #  @event = Event.find(params[:event_id])
-  #  @report = Event.find(params[:event_id]).reports.find(params[:id])
     @report = Report.find(params[:id])
   end
 
   def update
-    #@event = Event.find(params[:event_id])
-    #@report = Event.find(params[:event_id]).reports.find(params[:id])
     @report = Report.find(params[:id])
 
     if @report.update(report_params)
@@ -38,7 +33,6 @@ class ReportsController < ApplicationController
   end
   
   def destroy
-    #@report = Event.find(params[:event_id]).reports.find(params[:id])
     @report = Report.find(params[:id])
     @event = @report.event
     @report.destroy
