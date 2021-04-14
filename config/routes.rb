@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resources :reports, shallow: true
   end
   
+  resources :users
+  
 end
