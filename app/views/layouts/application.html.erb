@@ -10,11 +10,6 @@
   </head>
   
   <body>
-    <%= logged_in? %>
-    <% if current_user != nil %>
-      <%= link_to 'Log Out', logout_path, method: :delete %>
-    <% end %>
-    
-    <%= yield %>
+    <%= render "layouts/menu" %>
   </body>
 </html>
