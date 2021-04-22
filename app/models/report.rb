@@ -4,4 +4,6 @@ class Report < ApplicationRecord
   validates :actual_events, presence: true
   validates :lessons, presence: true
   validates :next_time, presence: true
+  
+  has_one :user, through: :events
 end
