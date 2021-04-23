@@ -5,6 +5,6 @@
 <%= @user.name %> <br/> <br/>
 <%= @user.email %>
 
-<p><%= link_to "Delete User", user_path(@user),
-                  method: :delete,
-                  data: { confirm: "Delete User? This cannot be undone" } %></p>
+<p><%= link_to "Edit Profile", edit_user_path(@user) %>
+</p>
+

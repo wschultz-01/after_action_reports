@@ -1,2 +1,8 @@
-not ready to have a full edit page, just waiting to add sessions <br/>
-still couldnt hurt to have a stub of a page though
+<h1>
+  Edit User
+</h1>
+<%= render "form", event: @user %>
+
+<p><%= link_to "Delete Account", user_path(@user),
+                  method: :delete,
+                  data: { confirm: "Delete User? This cannot be undone" } %></p>
