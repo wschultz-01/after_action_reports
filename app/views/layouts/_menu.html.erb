@@ -1,8 +1,8 @@
 <%= link_to 'Events', root_path %>
 
 <%if logged_in? %>
-  <%= link_to 'My Events', '#' %>
-  <%= link_to 'My Reports', '#' %>
+  <%= link_to 'My Events', myevents_path %>
+  <%= link_to 'My Reports', myreports_path %>
   <%= link_to 'My Account', user_path(current_user) %>
   <%= link_to 'Log Out', logout_path, method: :delete %>
 <% else %>
