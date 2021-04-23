@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   
   get '/myevents', to: 'events#myevents'
+  get '/myreports', to: 'reports#myreports'
   
 end

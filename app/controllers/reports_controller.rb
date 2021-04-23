@@ -48,6 +48,11 @@ class ReportsController < ApplicationController
     redirect_to event_path(@event)
   end
   
+  def myreports
+    @reports = current_user.reports
+    render :myreports
+  end
+  
   private
     
     def report_params
