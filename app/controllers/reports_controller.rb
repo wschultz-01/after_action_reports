@@ -15,8 +15,6 @@ class ReportsController < ApplicationController
   end
   
   def create
-    @event = Event.find(params[:event_id])
-    #@report = @event.reports.create(report_params)
     @report = Report.new(report_params)
     @report.event = Event.find(params[:event_id])
     @report.user = current_user
