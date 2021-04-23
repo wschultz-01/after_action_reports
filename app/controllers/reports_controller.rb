@@ -16,8 +16,16 @@ class ReportsController < ApplicationController
   
   def create
     @event = Event.find(params[:event_id])
-    @report = @event.reports.create(report_params)
-    redirect_to event_path(@event)
+    #@report = @event.reports.create(report_params)
+    @report = Report.new(report_params)
+    @report.event = Event.find(params[:event_id])
+    @report.user = current_user
+    
+    if @report.save
+      redirect_to @report
+    else
+      render :new
+    end
   end
   
   def edit

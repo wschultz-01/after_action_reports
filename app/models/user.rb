@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :events
-  has_many :reports, through: :events
+  has_many :reports
   
   has_secure_password
   validates :name, presence: true
