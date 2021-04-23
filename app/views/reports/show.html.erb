@@ -10,7 +10,9 @@
 <h2>Next Time</h2>
 <%= @report.next_time %><br/>
 
-<p><%= link_to "Back to Event",  event_path(@report.event) %></p>
+<p><%= link_to "Previous Page", :back %></p>
+
+<p><%= link_to "View Event",  event_path(@report.event) %></p>
 
 <p><%= link_to "Edit Report",  edit_report_path(@report) %></p>
 
