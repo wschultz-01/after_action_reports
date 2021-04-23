@@ -47,6 +47,12 @@ class EventsController < ApplicationController
     redirect_to root_path
   end
   
+  def myevents
+    @events = current_user.events
+    render :myevents
+  end
+  
+  
     private
     def event_params
       params.require(:event).permit(:title, :description, :date)
